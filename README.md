@@ -4,6 +4,9 @@ TO DOWNLOAD + RUN:
   1. In directory of your choice, run:
      ```
      git clone https://github.com/HatmanW/MavBracket/edit/main/README.md
+     
+     ```
+     ```
      python3 -m venv venv
      ```
      ```
