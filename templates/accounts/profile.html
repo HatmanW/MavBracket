@@ -1,0 +1,17 @@
+<!-- templates/accounts/profile.html -->
+{% extends "base.html" %}
+{% block title %}Your Profile{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb"><ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Profile</li>
+</ol></nav>
+
+<h1>Your Profile</h1>
+<p><strong>Username:</strong> {{ user.username }}</p>
+<p><strong>Name:</strong> {{ user.get_full_name|default:"—" }}</p>
+<p><strong>Email:</strong> {{ user.email|default:"—" }}</p>
+
+<a class="btn btn-primary" href="{% url 'accounts:profile_edit' %}">Edit Profile</a>
+<a class="btn btn-outline-secondary" href="{% url 'tournaments:index' %}">Tournaments</a>
+{% endblock %}
